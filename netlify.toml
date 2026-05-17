@@ -1,0 +1,125 @@
+[build]
+  command = "npm run build"
+  publish = "dist/public"
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/our-story.html"
+  to = "/our-story"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/life-at-rossholme.html"
+  to = "/life-at-rossholme"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/school-in-kenya.html"
+  to = "/life-at-rossholme"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/get-involved.html"
+  to = "/get-involved"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/newsletter.html"
+  to = "/newsletter"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rossholme-kenya"
+  to = "/our-story"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/how-rossholme-started"
+  to = "/our-story"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rossholme-history"
+  to = "/our-story"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gallery"
+  to = "/life-at-rossholme"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/our-charity"
+  to = "/life-at-rossholme"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/newsletter-ref-page"
+  to = "/newsletter"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/25k-fund-raising"
+  to = "/get-involved"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/project-page"
+  to = "/get-involved"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sponsored-walk"
+  to = "/get-involved"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/our-story"
+  to = "/our-story.html"
+  status = 200
+
+[[redirects]]
+  from = "/life-at-rossholme"
+  to = "/life-at-rossholme.html"
+  status = 200
+
+[[redirects]]
+  from = "/school-in-kenya"
+  to = "/life-at-rossholme"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/get-involved"
+  to = "/get-involved.html"
+  status = 200
+
+[[redirects]]
+  from = "/newsletter"
+  to = "/newsletter.html"
+  status = 200

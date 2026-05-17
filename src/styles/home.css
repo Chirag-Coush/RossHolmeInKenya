@@ -1,0 +1,236 @@
+/* Position of all elements as a parent of the circles */
+.hero-section {
+  /* Rainbow controls:
+     --hero-rainbow-size controls the diameter of the radial light.
+     --hero-rainbow-top aligns the glow behind the hero circle.
+     --hero-rainbow-spread scales the glow beyond the circle edge.
+     --hero-rainbow-opacity controls intensity.
+     --hero-rainbow-blur softens the color transitions.
+     --hero-rainbow-inner-clear controls where the centre stays transparent.
+     --hero-rainbow-inner-fade controls where the inner edge finishes fading in.
+     --hero-rainbow-outer-solid controls where the outer edge starts fading out.
+     --hero-rainbow-outer-fade controls where the outer edge fully disappears.
+     --hero-rainbow-pulse-min controls the smallest scale during the pulse.
+     --hero-rainbow-pulse-max controls the largest scale during the pulse.
+     --hero-rainbow-glow-min controls the weakest inner glow opacity.
+     --hero-rainbow-glow-max controls the strongest inner glow opacity.
+     --hero-rainbow-speed controls the slow color drift animation. */
+  --hero-rainbow-size: 760px;
+  --hero-rainbow-top: 5.5rem;
+  --hero-rainbow-spread: 1.4;
+  --hero-rainbow-opacity: .4;
+  --hero-rainbow-blur: 1px;
+  --hero-rainbow-inner-clear: 24%;
+  --hero-rainbow-inner-fade: 12%;
+  --hero-rainbow-outer-solid: 40%;
+  --hero-rainbow-outer-fade: 66%;
+  --hero-rainbow-pulse-min: 1 ;
+  --hero-rainbow-pulse-max: 1.4;
+  --hero-rainbow-glow-min: 0.45;
+  --hero-rainbow-glow-max: 0.95;
+  --hero-rainbow-speed: 5s;
+  height: 730px;
+  padding-top: 7rem;
+  isolation: isolate;
+}
+.hero-backlight {
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: var(--hero-rainbow-top);
+  z-index: 0;
+  width: var(--hero-rainbow-size);
+  aspect-ratio: 1;
+  transform: translateX(-50%) scale(var(--hero-rainbow-spread));
+  overflow: hidden;
+  border-radius: 9999px;
+  opacity: var(--hero-rainbow-opacity);
+  filter: blur(var(--hero-rainbow-blur)) saturate(1.28);
+  mix-blend-mode: screen;
+  mask-image: radial-gradient(
+    circle,
+    transparent 0 var(--hero-rainbow-inner-clear),
+    rgb(0 0 0 / 45%) var(--hero-rainbow-inner-fade),
+    #000 var(--hero-rainbow-outer-solid),
+    transparent var(--hero-rainbow-outer-fade)
+  );
+  mask-mode: alpha;
+}
+.hero-backlight::before,
+.hero-backlight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.hero-backlight::before {
+  background: conic-gradient(
+    from 18deg at 50% 50%,
+    rgba(177, 35, 168, 0.5),
+    rgba(85, 66, 210, 0.5),
+    rgba(44, 170, 230, 0.5),
+    rgba(49, 190, 126, 0.5),
+    rgba(246, 214, 52, 0.5),
+    rgba(255, 127, 28, 0.5),
+    rgba(226, 55, 38, 0.5),
+    rgba(177, 35, 168, 0.5)
+  );
+  transform-origin: center;
+  animation: hero-radial-rainbow-drift var(--hero-rainbow-speed) linear infinite;
+}
+.hero-backlight::after {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.12) 0 32%, transparent 46%), radial-gradient(circle at 38% 28%, rgba(255, 231, 130, 0.42) 0 12%, transparent 34%),
+    radial-gradient(circle at 66% 32%, rgba(255, 142, 126, 0.34) 0 10%, transparent 32%), radial-gradient(circle at 34% 70%, rgba(80, 186, 230, 0.26) 0 10%, transparent 34%),
+    radial-gradient(circle at 70% 72%, rgba(84, 198, 130, 0.24) 0 12%, transparent 36%);
+  background-size:
+    100% 100%,
+    64% 64%,
+    58% 58%,
+    62% 62%,
+    70% 70%;
+  background-position:
+    50% 50%,
+    28% 26%,
+    72% 30%,
+    30% 72%,
+    76% 74%;
+  opacity: var(--hero-rainbow-glow-min);
+  transform-origin: center;
+  animation: hero-radial-rainbow-pulse calc(var(--hero-rainbow-speed) * 0.8) ease-in-out infinite alternate;
+}
+.hero-orb {
+  aspect-ratio: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 768px;
+}
+/* Outer rings */
+.hero-ring {
+  border: 0.5px solid currentColor;
+  opacity: 0.65;
+}
+.hero-ring-green {
+  inset: -8px;
+  color: #006600;
+}
+.hero-ring-red {
+  inset: -16px;
+  color: #bb0000;
+}
+/* Main circle */
+.hero-circle {
+  background: radial-gradient(ellipse at 50% 18%, #fff9f6 0%, #ffd0bd3d 100%);
+  /* box-shadow: 0 100px 100px 100px #ffdbcc80; */
+}
+
+.hero-content {
+  left: 50%;
+  top: 40px;
+  width: 100vw;
+  padding-inline: 1.5rem;
+  transform: translateX(-50%);
+}
+
+.title-gradient {
+  filter: url("#inset-shadow");
+  background-image: linear-gradient(0deg, #311002, #897166);
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-image {
+  bottom: 12%;
+  width: 55%;
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    --hero-rainbow-size: min(1180px, 100vw);
+    --hero-rainbow-top: 12rem;
+    --hero-rainbow-spread: 1.4;
+    --hero-rainbow-opacity: .4;
+    height: calc(min(1080px, 100vw) * 0.78 + 150px);
+    padding-top: 6rem;
+  }
+
+  @media (min-width: 1280px) {
+  .hero-section {
+    --hero-rainbow-size: min(1280px, 100vw);
+    --hero-rainbow-top: 17rem;
+    --hero-rainbow-spread: 1.4;
+    --hero-rainbow-opacity: .4;
+    height: calc(min(1080px, 100vw) * 0.78 + 150px);
+    padding-top: 6rem;
+  }
+  }
+  .hero-orb {
+    width: min(1080px, 100vw);
+  }
+
+  .hero-content {
+    inset-inline: 10%;
+    top: 10%;
+    width: auto;
+    padding-inline: 0;
+    transform: none;
+  }
+
+  .hero-image {
+    bottom: 0%;
+    width: 100%;
+  }
+}
+
+
+
+.stat-number {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes hero-radial-rainbow-drift {
+  0% {
+    transform: rotate(0deg) scale(var(--hero-rainbow-pulse-min));
+  }
+
+  50% {
+    transform: rotate(180deg) scale(var(--hero-rainbow-pulse-max));
+  }
+
+  100% {
+    transform: rotate(360deg) scale(var(--hero-rainbow-pulse-min));
+  }
+}
+
+@keyframes hero-radial-rainbow-pulse {
+  0% {
+    transform: scale(var(--hero-rainbow-pulse-min));
+    opacity: var(--hero-rainbow-glow-min);
+    background-position:
+      50% 50%,
+      28% 26%,
+      72% 30%,
+      30% 72%,
+      76% 74%;
+  }
+
+  50% {
+    opacity: var(--hero-rainbow-glow-max);
+    background-position:
+      50% 50%,
+      34% 22%,
+      68% 36%,
+      36% 76%,
+      70% 68%;
+  }
+
+  100% {
+    transform: scale(var(--hero-rainbow-pulse-max));
+    opacity: calc(var(--hero-rainbow-glow-min) + 0.1);
+    background-position:
+      50% 50%,
+      24% 34%,
+      76% 24%,
+      26% 66%,
+      80% 78%;
+  }
+}
