@@ -65,7 +65,7 @@ export const initPage = () => {
     });
   };
 
-  const animatedElements = document.querySelectorAll("main > section, [data-animate]");
+  const animatedElements = document.querySelectorAll("main > section:not(:first-child), [data-animate]");
 
   if ("IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver(
