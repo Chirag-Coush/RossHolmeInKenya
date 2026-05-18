@@ -18,13 +18,13 @@
   --hero-rainbow-size: 760px;
   --hero-rainbow-top: 5.5rem;
   --hero-rainbow-spread: 1.4;
-  --hero-rainbow-opacity: .4;
+  --hero-rainbow-opacity: 0.4;
   --hero-rainbow-blur: 1px;
   --hero-rainbow-inner-clear: 24%;
   --hero-rainbow-inner-fade: 12%;
   --hero-rainbow-outer-solid: 40%;
   --hero-rainbow-outer-fade: 66%;
-  --hero-rainbow-pulse-min: 1 ;
+  --hero-rainbow-pulse-min: 1;
   --hero-rainbow-pulse-max: 1.4;
   --hero-rainbow-glow-min: 0.45;
   --hero-rainbow-glow-max: 0.95;
@@ -148,20 +148,20 @@
     --hero-rainbow-size: min(1180px, 100vw);
     --hero-rainbow-top: 12rem;
     --hero-rainbow-spread: 1.4;
-    --hero-rainbow-opacity: .4;
+    --hero-rainbow-opacity: 0.4;
     height: calc(min(1080px, 100vw) * 0.78 + 150px);
     padding-top: 6rem;
   }
 
   @media (min-width: 1280px) {
-  .hero-section {
-    --hero-rainbow-size: min(1280px, 100vw);
-    --hero-rainbow-top: 17rem;
-    --hero-rainbow-spread: 1.4;
-    --hero-rainbow-opacity: .4;
-    height: calc(min(1080px, 100vw) * 0.78 + 150px);
-    padding-top: 6rem;
-  }
+    .hero-section {
+      --hero-rainbow-size: min(1280px, 100vw);
+      --hero-rainbow-top: 17rem;
+      --hero-rainbow-spread: 1.4;
+      --hero-rainbow-opacity: 0.4;
+      height: calc(min(1080px, 100vw) * 0.78 + 150px);
+      padding-top: 6rem;
+    }
   }
   .hero-orb {
     width: min(1080px, 100vw);
@@ -181,10 +181,43 @@
   }
 }
 
-
-
 .stat-number {
   font-variant-numeric: tabular-nums;
+}
+
+.mission-section .mission-media,
+.mission-section .mission-copy,
+.headteacher-frame > img {
+  transition:
+    opacity 850ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 850ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mission-section[data-animate] .mission-media {
+  opacity: 0;
+  transform: translateX(-2rem);
+}
+
+.mission-section[data-animate] .mission-copy {
+  opacity: 0;
+  transform: translateX(2rem);
+  transition-delay: 120ms;
+}
+
+.mission-section.is-visible .mission-media,
+.mission-section.is-visible .mission-copy {
+  opacity: 1;
+  transform: none;
+}
+
+section[data-animate] .headteacher-frame > img {
+  opacity: 0;
+  transform: translate(-1.5rem, -1.5rem);
+}
+
+section.is-visible .headteacher-frame > img {
+  opacity: 1;
+  transform: none;
 }
 
 @keyframes hero-radial-rainbow-drift {
@@ -198,6 +231,16 @@
 
   100% {
     transform: rotate(360deg) scale(var(--hero-rainbow-pulse-min));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mission-section .mission-media,
+  .mission-section .mission-copy,
+  .headteacher-frame > img {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 
