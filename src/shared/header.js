@@ -36,12 +36,12 @@ export const initSiteHeader = () => {
             <a href="/get-involved" class="btn btn-primary min-h-10 px-6 text-sm">Join our mission</a>
           </nav>
 
-          <button data-menu-button class="p-2 lg:hidden" type="button" aria-label="Toggle menu" aria-expanded="false">
-            <svg class="h-8 w-8" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 6h16"></path>
-              <path d="M4 12h16"></path>
-              <path d="M4 18h16"></path>
-            </svg>
+          <button data-menu-button class="nav-toggle lg:hidden" type="button" aria-label="Open navigation menu" aria-expanded="false">
+            <span class="nav-toggle__icon" aria-hidden="true">
+              <span class="nav-toggle__line nav-toggle__line--top"></span>
+              <span class="nav-toggle__line nav-toggle__line--middle"></span>
+              <span class="nav-toggle__line nav-toggle__line--bottom"></span>
+            </span>
           </button>
         </div>
       </div>

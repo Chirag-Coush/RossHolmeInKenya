@@ -21,6 +21,7 @@ export const initPage = () => {
     const nextOpen = !isOpen;
 
     menuButton.setAttribute("aria-expanded", String(nextOpen));
+    menuButton.setAttribute("aria-label", nextOpen ? "Close navigation menu" : "Open navigation menu");
     mobileMenu?.toggleAttribute("hidden", isOpen);
     header?.classList.toggle("is-open", nextOpen);
   });

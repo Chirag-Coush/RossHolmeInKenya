@@ -352,4 +352,42 @@
       -webkit-backdrop-filter: blur(26px) saturate(100%);
     }
   }
+
+  .nav-toggle {
+    @apply relative grid size-12 place-items-center rounded-md text-black/75 transition-colors duration-200 hover:text-black focus-visible:ring-2 focus-visible:ring-orange-700 focus-visible:ring-offset-2 focus-visible:outline-none;
+  }
+
+  .nav-toggle__icon {
+    @apply relative block h-6 w-8;
+  }
+
+  .nav-toggle__line {
+    @apply absolute left-0 h-[2.5px] w-8 rounded-full bg-current transition-[opacity,transform] duration-300 ease-out;
+    transform-origin: 50% 50%;
+  }
+
+  .nav-toggle__line--top {
+    transform: translateY(2px);
+  }
+
+  .nav-toggle__line--middle {
+    transform: translateY(11px);
+  }
+
+  .nav-toggle__line--bottom {
+    transform: translateY(20px);
+  }
+
+  .nav-toggle[aria-expanded="true"] .nav-toggle__line--top {
+    transform: translateY(11px) rotate(45deg);
+  }
+
+  .nav-toggle[aria-expanded="true"] .nav-toggle__line--middle {
+    opacity: 0;
+    transform: translateY(11px) scaleX(0.2);
+  }
+
+  .nav-toggle[aria-expanded="true"] .nav-toggle__line--bottom {
+    transform: translateY(11px) rotate(-45deg);
+  }
 }
