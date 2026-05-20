@@ -1,0 +1,23 @@
+/index.html              /                         301!
+/our-story.html          /our-story                301!
+/life-at-rossholme.html  /life-at-rossholme        301!
+/school-in-kenya.html    /life-at-rossholme        301!
+/get-involved.html       /get-involved             301!
+/newsletter.html         /newsletter               301!
+
+/rossholme-kenya         /our-story                301!
+/how-rossholme-started   /our-story                301!
+/rossholme-history       /our-story                301!
+/gallery                 /life-at-rossholme        301!
+/our-charity             /life-at-rossholme        301!
+/newsletter-ref-page     /newsletter               301!
+/25k-fund-raising        /get-involved             301!
+/project-page            /get-involved             301!
+/sponsored-walk          /get-involved             301!
+/contact                 /                         301!
+
+/school-in-kenya         /life-at-rossholme        301!
+/our-story               /our-story.html           200
+/life-at-rossholme       /life-at-rossholme.html   200
+/get-involved            /get-involved.html        200
+/newsletter              /newsletter.html          200
