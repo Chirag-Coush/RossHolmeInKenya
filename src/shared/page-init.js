@@ -8,6 +8,7 @@ export const initPage = () => {
   const header = document.querySelector("[data-site-nav]");
   const menuButton = document.querySelector("[data-menu-button]");
   const mobileMenu = document.querySelector("[data-mobile-menu]");
+  let mobileMenuCloseTimer;
   const headerBlurScrollOffset = 100;
   const updateHeaderState = () => {
     header?.classList.toggle("is-scrolled", window.scrollY > headerBlurScrollOffset);
@@ -20,10 +21,28 @@ export const initPage = () => {
     const isOpen = menuButton.getAttribute("aria-expanded") === "true";
     const nextOpen = !isOpen;
 
+    window.clearTimeout(mobileMenuCloseTimer);
     menuButton.setAttribute("aria-expanded", String(nextOpen));
     menuButton.setAttribute("aria-label", nextOpen ? "Close navigation menu" : "Open navigation menu");
-    mobileMenu?.toggleAttribute("hidden", isOpen);
     header?.classList.toggle("is-open", nextOpen);
+
+    if (!mobileMenu) return;
+
+    if (nextOpen) {
+      mobileMenu.hidden = false;
+      requestAnimationFrame(() => {
+        mobileMenu.classList.add("is-open");
+        mobileMenu.classList.remove("is-closing");
+      });
+      return;
+    }
+
+    mobileMenu.classList.remove("is-open");
+    mobileMenu.classList.add("is-closing");
+    mobileMenuCloseTimer = window.setTimeout(() => {
+      mobileMenu.hidden = true;
+      mobileMenu.classList.remove("is-closing");
+    }, 420);
   });
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
