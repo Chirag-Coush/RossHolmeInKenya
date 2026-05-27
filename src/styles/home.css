@@ -119,7 +119,7 @@
 }
 /* Main circle */
 .hero-circle {
-  background: radial-gradient(ellipse at 50% 18%, #fff9f6 0%, #ffd0bd3d 100%);
+  background: radial-gradient(ellipse at 50% 18%, #fff9f6 20%, #ffd0bd3d 100%);
   /* box-shadow: 0 100px 100px 100px #ffdbcc80; */
 }
 

@@ -98,7 +98,7 @@ export const initPage = () => {
           revealObserver.unobserve(entry.target);
         });
       },
-      { rootMargin: "0px 0px -12% 0px", threshold: 0.12 },
+      { rootMargin: "0px 0px -12% 0px", threshold: 0 },
     );
 
     animatedElements.forEach((element) => {

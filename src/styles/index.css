@@ -8,6 +8,7 @@
 
   html {
     @apply overflow-x-clip;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -83,15 +84,19 @@
     @apply border-slate-950 bg-slate-950 text-white/90 hover:text-white hover:shadow-lg;
   }
 
-  .btn-primary-on-dark {
+  .btn-primary-dark {
     @apply border-white/80 bg-white/95 text-black/80 hover:border-white hover:bg-white hover:text-black hover:shadow-xl;
   }
 
-  .btn-outline {
+  .btn-tertiary {
+    @apply border-slate-950/80 bg-white/10 text-black/80 hover:border-slate-950 hover:bg-white/20 hover:text-black hover:shadow-md;
+  }
+
+  .btn-secondary {
     @apply border-black/20 bg-white/50 text-black/80 hover:bg-white;
   }
 
-  .btn-outline-on-dark {
+  .btn-secondary-dark {
     @apply border-white/30 bg-transparent text-white/80 hover:bg-white/5 hover:text-white;
   }
 
@@ -233,8 +238,8 @@
 
   .chapter-cta-bg {
     @apply relative isolate overflow-hidden;
-    background: radial-gradient(circle at 50% 700%, rgb(250, 225, 186) 85%, oklch(98% 0.016 73.684) 90%, rgba(255, 208, 189, 0) 100%);
-    background-color: oklch(98% 0.016 73.684);
+    background: radial-gradient(circle at 50% 700%, #fae1ba 85%, oklch(98% 0.016 73.684) 90%, rgba(255, 208, 189, 0) 100%);
+    background-color: #fff7ed;
   }
 
   @media (min-width: 768px) {

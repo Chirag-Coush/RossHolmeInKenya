@@ -1,0 +1,33 @@
+RewriteEngine On
+
+# Canonical production domain.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^www\.rossholmeinkenya\.org$ [NC]
+RewriteRule ^ https://www.rossholmeinkenya.org%{REQUEST_URI} [R=301,L]
+
+# Legacy file URLs to clean URLs.
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^our-story\.html$ /our-story [R=301,L]
+RewriteRule ^life-at-rossholme\.html$ /life-at-rossholme [R=301,L]
+RewriteRule ^school-in-kenya\.html$ /life-at-rossholme [R=301,L]
+RewriteRule ^get-involved\.html$ /get-involved [R=301,L]
+RewriteRule ^newsletter\.html$ /newsletter [R=301,L]
+
+# Legacy page redirects.
+RewriteRule ^rossholme-kenya/?$ /our-story [R=301,L]
+RewriteRule ^how-rossholme-started/?$ /our-story [R=301,L]
+RewriteRule ^rossholme-history/?$ /our-story [R=301,L]
+RewriteRule ^gallery/?$ /life-at-rossholme [R=301,L]
+RewriteRule ^our-charity/?$ /life-at-rossholme [R=301,L]
+RewriteRule ^newsletter-ref-page/?$ /newsletter [R=301,L]
+RewriteRule ^25k-fund-raising/?$ /get-involved [R=301,L]
+RewriteRule ^project-page/?$ /get-involved [R=301,L]
+RewriteRule ^sponsored-walk/?$ /get-involved [R=301,L]
+RewriteRule ^contact/?$ / [R=301,L]
+
+# Clean URL rewrites.
+RewriteRule ^our-story/?$ /our-story.html [L]
+RewriteRule ^life-at-rossholme/?$ /life-at-rossholme.html [L]
+RewriteRule ^school-in-kenya/?$ /life-at-rossholme.html [L]
+RewriteRule ^get-involved/?$ /get-involved.html [L]
+RewriteRule ^newsletter/?$ /newsletter.html [L]
