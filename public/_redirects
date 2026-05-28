@@ -1,5 +1,29 @@
 https://rossholmeinkenya.netlify.app/*  https://www.rossholmeinkenya.org/:splat  301!
 
+https://www.rossholme.co.uk/rossholme-kenya        https://www.rossholmeinkenya.org/our-story          301!
+https://www.rossholme.co.uk/how-rossholme-started  https://www.rossholmeinkenya.org/our-story          301!
+https://www.rossholme.co.uk/rossholme-history      https://www.rossholmeinkenya.org/our-story          301!
+https://www.rossholme.co.uk/gallery                https://www.rossholmeinkenya.org/life-at-rossholme  301!
+https://www.rossholme.co.uk/our-charity            https://www.rossholmeinkenya.org/life-at-rossholme  301!
+https://www.rossholme.co.uk/newsletter-ref-page    https://www.rossholmeinkenya.org/newsletter         301!
+https://www.rossholme.co.uk/25k-fund-raising       https://www.rossholmeinkenya.org/get-involved       301!
+https://www.rossholme.co.uk/project-page           https://www.rossholmeinkenya.org/get-involved       301!
+https://www.rossholme.co.uk/sponsored-walk         https://www.rossholmeinkenya.org/get-involved       301!
+https://www.rossholme.co.uk/contact                https://www.rossholmeinkenya.org/                  301!
+https://www.rossholme.co.uk/*                      https://www.rossholmeinkenya.org/:splat             301!
+
+https://rossholme.co.uk/rossholme-kenya            https://www.rossholmeinkenya.org/our-story          301!
+https://rossholme.co.uk/how-rossholme-started      https://www.rossholmeinkenya.org/our-story          301!
+https://rossholme.co.uk/rossholme-history          https://www.rossholmeinkenya.org/our-story          301!
+https://rossholme.co.uk/gallery                    https://www.rossholmeinkenya.org/life-at-rossholme  301!
+https://rossholme.co.uk/our-charity                https://www.rossholmeinkenya.org/life-at-rossholme  301!
+https://rossholme.co.uk/newsletter-ref-page        https://www.rossholmeinkenya.org/newsletter         301!
+https://rossholme.co.uk/25k-fund-raising           https://www.rossholmeinkenya.org/get-involved       301!
+https://rossholme.co.uk/project-page               https://www.rossholmeinkenya.org/get-involved       301!
+https://rossholme.co.uk/sponsored-walk             https://www.rossholmeinkenya.org/get-involved       301!
+https://rossholme.co.uk/contact                    https://www.rossholmeinkenya.org/                  301!
+https://rossholme.co.uk/*                          https://www.rossholmeinkenya.org/:splat             301!
+
 /index.html              /                         301!
 /our-story.html          /our-story                301!
 /life-at-rossholme.html  /life-at-rossholme        301!
