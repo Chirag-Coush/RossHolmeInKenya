@@ -245,8 +245,8 @@
   @media (min-width: 768px) {
     .story-hero-bg::before,
     .story-hero-bg::after {
-      top: 140%;
-      width: clamp(62rem, 112vw, 104rem);
+      top: -40%;
+      width: clamp(120rem, 112vw, 104rem);
     }
   }
 

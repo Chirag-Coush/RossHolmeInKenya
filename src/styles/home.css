@@ -132,8 +132,21 @@
 }
 
 .hero-image {
-  bottom: 12%;
-  width: 55%;
+  bottom: -4%;
+  width: 80%;
+}
+@media (min-width: 640px) {
+   .hero-image {
+    bottom: 2%;
+    width: 95%;
+  }
+}
+
+@media (min-width: 768px) {
+   .hero-image {
+    bottom: 0%;
+    width: 100%;
+  }
 }
 
 @media (min-width: 1024px) {

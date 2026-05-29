@@ -35,7 +35,7 @@
   width: var(--rainbow-spread);
   height: var(--rainbow-height);
   opacity: var(--rainbow-opacity);
-  filter: blur(var(--rainbow-blur)) saturate(1.3);
+  filter: blur(var(--rainbow-blur)) saturate(2.3);
   mix-blend-mode: screen;
   mask-image: linear-gradient(to bottom, transparent 0%, #000 12%, #000 66%, transparent 100%);
 }
