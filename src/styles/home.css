@@ -18,7 +18,7 @@
   --hero-rainbow-size: 760px;
   --hero-rainbow-top: 5.5rem;
   --hero-rainbow-spread: 1.4;
-  --hero-rainbow-opacity: 0.4;
+  --hero-rainbow-opacity: 0.5;
   --hero-rainbow-blur: 1px;
   --hero-rainbow-inner-clear: 24%;
   --hero-rainbow-inner-fade: 12%;
@@ -120,7 +120,7 @@
 /* Main circle */
 .hero-circle {
   background: radial-gradient(ellipse at 50% 18%, #fff9f6 20%, #ffd0bd3d 100%);
-  /* box-shadow: 0 100px 100px 100px #ffdbcc80; */
+  box-shadow: 0 150px 100px 100px #ffdbcc80;
 }
 
 .hero-content {
@@ -135,6 +135,63 @@
   bottom: -4%;
   width: 80%;
 }
+
+.hero-image--primary {
+  animation: hero-image-primary 10s ease-in-out infinite;
+}
+
+.hero-image--secondary {
+  opacity: 0;
+  animation: hero-image-secondary 10s ease-in-out infinite;
+}
+
+@keyframes hero-image-primary {
+  0%,
+  35% {
+    opacity: 1;
+  }
+
+  50%,
+  85% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-image-secondary {
+  0%,
+  35% {
+    opacity: 0;
+  }
+
+  50%,
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image--primary,
+  .hero-image--secondary {
+    animation: none;
+  }
+
+  .hero-image--primary {
+    opacity: 1;
+  }
+
+  .hero-image--secondary {
+    opacity: 0;
+  }
+}
+
 @media (min-width: 640px) {
    .hero-image {
     bottom: 2%;
@@ -164,7 +221,7 @@
       --hero-rainbow-size: min(1280px, 100vw);
       --hero-rainbow-top: 17rem;
       --hero-rainbow-spread: 1.4;
-      --hero-rainbow-opacity: 0.4;
+      --hero-rainbow-opacity: 0.6;
       height: calc(min(1080px, 100vw) * 0.78 + 150px);
       padding-top: 6rem;
     }
