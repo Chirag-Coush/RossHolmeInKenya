@@ -35,7 +35,11 @@ export const initSiteFooter = () => {
           </div>
         </div>
         <div class="mt-12 border-t border-orange-50/20 pt-8 text-center text-sm text-orange-50/60">
-          <p>Rossholme in Kenya. Registered Charity CIO No. 1178553</p>
+          <p>
+            Website designed, developed and maintained by
+            <a href="https://chiragcoush.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-rose-200 transition-colors hover:text-rose-100">Chirag Coush</a>,
+            proudly supporting Rossholme in Kenya.
+          </p>
         </div>
       </div>
     </footer>
