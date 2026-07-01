@@ -24,7 +24,7 @@ export const initSiteFooter = () => {
           <div class="space-y-4 md:col-span-2">
             <h4 class="text-sm uppercase tracking-wider text-orange-50/60">Support Us</h4>
             <nav class="flex flex-col space-y-3">
-              <a href="https://www.justgiving.com/campaign/rossholme-ramble" target="_blank" rel="noopener noreferrer" class="text-orange-50/80 transition-colors hover:text-white">Donate via JustGiving</a>
+              <a href="https://www.justgiving.com/charity/rossholmeinkenya" target="_blank" rel="noopener noreferrer" class="text-orange-50/80 transition-colors hover:text-white">Donate via JustGiving</a>
               <a href="https://cafdonate.cafonline.org/11695#!/DonationDetails" target="_blank" rel="noopener noreferrer" class="text-orange-50/80 transition-colors hover:text-white">Donate via CAF</a>
             </nav>
           </div>
